@@ -1,0 +1,42 @@
+<hr>
+<h4 class="well"> <strong> Users</strong></h4>
+<hr>
+<table class="table table-hover">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">Name</th>
+      <!-- <th scope="col">Phone</th> -->
+      <th scope="col">Location</th>
+      <th scope="col">Email</th>
+      <th scope="col">userpass</th>
+      <th scope="col">salary</th>
+      <th scope="col">Active</th>
+
+      <th>Edit</th>
+      <th>Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="5" class="alert alert-danger" *ngIf="error$ | async as error">{{error}}</td>
+    </tr>
+    <tr>
+    <tr *ngFor="let customer of (customers$ |async)">
+      <th scope="row">{{customer.username}}</th>
+      <td>{{customer.location}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.userpass}}</td>
+      <td>{{customer.salary}}</td>
+      <td>{{customer.isActive}}</td>
+
+      <th>
+        <a (click)=editCustomer(customer)>edit</a>
+        
+      </th>
+      <th>
+        <a (click)=deleteCustomer(customer)>delete</a>
+      </th>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,42 @@
+
+       <h4 class="well"> <strong> Registration Form</strong></h4>
+       <hr>
+       <form [formGroup]="userForm" >
+    <div class="row">
+        <div class="col-sm-6 form-group">
+          <label>First Name</label>
+          <input type="text" formControlName="username" placeholder="Username" class="form-control">
+        </div>
+        <div class="col-sm-6 form-group">
+          <label>Email</label>
+          <input type="text" formControlName="email" placeholder="Email" class="form-control">
+        </div>
+      </div>	
+
+      <div class="row">
+          <div class="col-sm-6 form-group">
+            <label>Password</label>
+            <input type="text" formControlName="userpass" placeholder="User Password" class="form-control">
+          </div>
+          <div class="col-sm-6 form-group">
+            <label>Location</label>
+            <input type="text" formControlName="location" placeholder="Location" class="form-control">
+          </div>
+        </div>	
+        <div class="row">
+            <div class="col-sm-6 form-group">
+              <label>Join Date</label>
+              <input type="text" formControlName="joindate" placeholder="Join date" class="form-control">
+            </div>
+            <div class="col-sm-6 form-group">
+              <label>Salary</label>
+              <input type="text" formControlName="salary" placeholder="Salary" class="form-control">
+            </div>
+          </div>	
+          <div class="row">
+            <div class="col-sm-12">
+              <button  class="btn btn-info " (click)="createUser()">  Save </button>
+            </div>
+          </div>
+        </form>
+
